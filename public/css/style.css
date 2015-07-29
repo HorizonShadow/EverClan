@@ -1,0 +1,15 @@
+body > .grid {
+	height: 100%;
+}
+
+.column {
+	max-width: 450px;
+}
+
+.login-image {
+	width: inherit !important;
+}
+
+body {
+	background-image: url('/img/brushed/brushed.png')
+}

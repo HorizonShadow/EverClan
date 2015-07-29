@@ -1,0 +1,13 @@
+!!!
+%html
+	%head
+		%title RxSupport
+		=script('/js/jquery.min.js')
+		=css('semantic/dist/semantic.min.css')
+		=css('css/style.css')
+		=script('/js/script.js')
+		=script('semantic/dist/semantic.min.js')
+
+	%body
+		=render_partial(:menu) unless at_login?
+		=yield
