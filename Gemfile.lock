@@ -1,27 +1,67 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    akami (1.2.2)
+    addressable (2.3.8)
+    akami (1.3.1)
       gyoku (>= 0.4.0)
       nokogiri
     backports (3.6.5)
-    bcrypt (3.1.7-x86-mingw32)
-    bcrypt-ruby (3.1.5-x86-mingw32)
+    bcrypt (3.1.10-x64-mingw32)
+    bcrypt-ruby (3.1.5-x64-mingw32)
       bcrypt (>= 3.1.3)
     builder (3.2.2)
-    gyoku (1.1.1)
+    datamapper (1.2.0)
+      dm-aggregates (~> 1.2.0)
+      dm-constraints (~> 1.2.0)
+      dm-core (~> 1.2.0)
+      dm-migrations (~> 1.2.0)
+      dm-serializer (~> 1.2.0)
+      dm-timestamps (~> 1.2.0)
+      dm-transactions (~> 1.2.0)
+      dm-types (~> 1.2.0)
+      dm-validations (~> 1.2.0)
+    dm-aggregates (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-constraints (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-core (1.2.1)
+      addressable (~> 2.3)
+    dm-migrations (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-serializer (1.2.2)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      json_pure (~> 1.6)
+      multi_json (~> 1.0)
+    dm-timestamps (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-transactions (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-types (1.2.2)
+      bcrypt-ruby (~> 3.0)
+      dm-core (~> 1.2.0)
+      fastercsv (~> 1.5)
+      json (~> 1.6)
+      multi_json (~> 1.0)
+      stringex (~> 1.4)
+      uuidtools (~> 2.1)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
+    fastercsv (1.5.5)
+    gyoku (1.3.1)
       builder (>= 2.1.2)
-    haml (4.0.5)
+    haml (4.0.6)
       tilt
-    httpi (2.1.1)
+    httpi (2.4.1)
       rack
-      rubyntlm (~> 0.3.2)
-    mime-types (1.25.1)
-    mini_portile (0.5.3)
+    json (1.8.3)
+    json_pure (1.8.2)
+    mini_portile (0.6.2)
     multi_json (1.11.2)
-    nokogiri (1.6.2.rc2-x86-mingw32)
-      mini_portile (~> 0.5.2)
-    nori (2.3.0)
+    nokogiri (1.6.6.2-x64-mingw32)
+      mini_portile (~> 0.6.0)
+    nori (2.6.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -29,43 +69,48 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rubyntlm (0.3.4)
-    savon (2.3.2)
-      akami (~> 1.2.0)
+    savon (2.11.1)
+      akami (~> 1.2)
       builder (>= 2.1.2)
-      gyoku (~> 1.1.0)
-      httpi (~> 2.1.0)
+      gyoku (~> 1.2)
+      httpi (~> 2.3)
       nokogiri (>= 1.4.0)
-      nori (~> 2.3.0)
-      wasabi (~> 3.2.2)
-    sinatra (1.4.4)
+      nori (~> 2.4)
+      wasabi (~> 3.4)
+    sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
-      tilt (~> 1.3, >= 1.3.4)
-    sinatra-contrib (1.4.2)
+      tilt (>= 1.3, < 3)
+    sinatra-contrib (1.4.6)
       backports (>= 2.0)
       multi_json
       rack-protection
       rack-test
       sinatra (~> 1.4.0)
-      tilt (~> 1.3)
-    sinatra-static-assets (1.0.3)
+      tilt (>= 1.3, < 3)
+    sinatra-static-assets (1.0.4)
       sinatra (>= 1.1.0)
-    tilt (1.4.1)
-    wasabi (3.2.3)
+    stringex (1.5.1)
+    tilt (2.0.1)
+    uuidtools (2.1.5)
+    wasabi (3.5.0)
       httpi (~> 2.0)
-      mime-types (< 2.0.0)
-      nokogiri (>= 1.4.0)
+      nokogiri (>= 1.4.2)
 
 PLATFORMS
-  x86-mingw32
+  x64-mingw32
 
 DEPENDENCIES
-  bcrypt-ruby
-  haml (= 4.0.5)
-  nokogiri (= 1.6.2.rc2)
+  bcrypt
+  datamapper
+  haml
+  nokogiri
+  rack
   rack-ssl
-  savon (= 2.3.2)
-  sinatra (= 1.4.4)
-  sinatra-contrib (= 1.4.2)
-  sinatra-static-assets (= 1.0.3)
+  savon
+  sinatra
+  sinatra-contrib
+  sinatra-static-assets
+
+BUNDLED WITH
+   1.10.6
